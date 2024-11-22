@@ -5,10 +5,10 @@ on:
       types: [published]
   workflow_dispatch: {}
 
-name: demo-website
+name: shinylive
 
 jobs:
-  demo-website:
+  shinylive:
     runs-on: ubuntu-latest
     # Only restrict concurrency for non-PR jobs
     concurrency:
