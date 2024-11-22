@@ -8,7 +8,7 @@ on:
 name: demo-website
 
 jobs:
-  demo-website:
+  shinylive:
     runs-on: ubuntu-latest
     # Only restrict concurrency for non-PR jobs
     concurrency:
