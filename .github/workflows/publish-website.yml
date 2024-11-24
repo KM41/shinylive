@@ -4,8 +4,8 @@ on:
   release:
       types: [published]
   workflow_dispatch: {}
-    
-name: demo-quarto-app
+
+name: demo-website
 
 jobs:
   demo-website:
@@ -30,18 +30,17 @@ jobs:
       - name: "Setup R"
         uses: r-lib/actions/setup-r@v2
 
-      # Pinned shinylive dependency
       - name: "Setup R dependencies for Quarto's knitr engine"
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages:
-            cran::shinylive@0.1.1
+            cran::shinylive@0.2.0
             any::knitr
             any::rmarkdown
             any::downlit
             any::xml2
 
-      # Setup Quarto
+      # Back to our regularly scheduled Quarto output
       - name: "Set up Quarto"
         uses: quarto-dev/quarto-actions/setup@v2
 
